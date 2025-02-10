@@ -13,10 +13,14 @@ const userDataSchema = new mongoose.Schema({
         type:Number,
         required:true,
         unique:true
+    },
+    userId:{
+        type:String,
+        required:true
     }
 
 })
 
-const userdatas = mongoose('userdatas',userDataSchema)
+const userdatas = mongoose.model('userdatas',userDataSchema)
 
 module.exports = userdatas

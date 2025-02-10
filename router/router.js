@@ -15,8 +15,10 @@ router.post('/login',userController.loginController)
 router.post('/add-userdata',jwtMiddleware,userDataController.addUserDetails)
 
 //get registerd user
-router.get('/register-user',jwtMiddleware,userController.registeredUsersController)
+router.get('/registered-user',jwtMiddleware,userDataController.registeredUsersController)
 
+//inidividual data
+router.get('/registered/:id/user',jwtMiddleware,userDataController.getUserData)
 
 
 module.exports = router

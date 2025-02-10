@@ -44,13 +44,3 @@ exports.loginController = async (req,res)=>{
     //res.status(200).json("Login request received")
 }
 
-exports.registeredUsersController = async (req,res)=>{
-    console.log('Inside registered user controller');
-    try {
-        const allRegisteredUser = await users.find()
-        res.status(200).json(allRegisteredUser)
-    } catch (error) {
-        res.status(401).json(error)
-    }
-    
-}
